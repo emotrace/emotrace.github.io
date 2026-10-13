@@ -1,0 +1,188 @@
+/* Minimal adaptation of AudioEditSurvey's academic project-page presentation.
+   Attribution and component licenses: THIRD_PARTY_NOTICES.md. */
+:root {
+  color-scheme: light;
+  --ink: #363636;
+  --body-ink: #4a4a4a;
+  --section-background: #f5f5f5;
+}
+
+html {
+  background: #fff;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--body-ink);
+  font-family: "Noto Sans", "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container.is-max-desktop {
+  width: 100%;
+  max-width: 960px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.publication-header .hero-body {
+  padding: 52px 24px 38px;
+}
+
+.publication-title.title.is-1 {
+  margin: 0;
+  color: var(--ink);
+  font-family: "Google Sans", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 600;
+}
+
+.project-name {
+  display: block;
+  margin-bottom: 18px;
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -1.8px;
+}
+
+.paper-title {
+  display: block;
+  font-size: 34px;
+  line-height: 1.24;
+  letter-spacing: -0.7px;
+  text-wrap: balance;
+}
+
+.teaser {
+  padding: 0 24px 44px;
+  font-family: inherit;
+}
+
+.paper-figure {
+  margin: 0;
+}
+
+.figure-link {
+  display: block;
+  cursor: zoom-in;
+}
+
+.figure-link img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+figcaption {
+  max-width: 900px;
+  margin: 17px auto 0;
+  color: #666;
+  font-size: 13px;
+  line-height: 1.65;
+  text-align: center;
+}
+
+figcaption strong {
+  color: var(--body-ink);
+  font-weight: 600;
+}
+
+.abstract-section {
+  padding: 40px 24px 54px;
+  background: var(--section-background);
+}
+
+.abstract-section .container {
+  max-width: 900px;
+}
+
+.abstract-section .title.is-3 {
+  margin-bottom: 24px;
+  color: var(--ink);
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.abstract-copy {
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+.method-name {
+  font-variant: small-caps;
+}
+
+a:focus-visible {
+  outline: 2px solid #3273dc;
+  outline-offset: 6px;
+}
+
+.skip-link {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 10px 14px;
+  transform: translateY(-180%);
+  background: #fff;
+  z-index: 2;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+@media (max-width: 767px) {
+  .publication-header .hero-body {
+    padding: 36px 20px 30px;
+  }
+
+  .project-name {
+    margin-bottom: 16px;
+    font-size: 42px;
+    letter-spacing: -1.2px;
+  }
+
+  .paper-title {
+    font-size: clamp(24px, 4.6vw, 32px);
+    line-height: 1.28;
+    letter-spacing: -0.4px;
+  }
+
+  .desktop-break {
+    display: none;
+  }
+
+  .teaser {
+    padding: 0 16px 30px;
+  }
+
+  figcaption {
+    margin-top: 14px;
+    padding: 0 4px;
+    font-size: 12px;
+    line-height: 1.6;
+    text-align: left;
+  }
+
+  .abstract-section {
+    padding: 30px 20px 40px;
+  }
+
+  .abstract-section .title.is-3 {
+    margin-bottom: 20px;
+    font-size: 25px;
+  }
+
+  .abstract-copy.content.has-text-justified {
+    font-size: 15px;
+    line-height: 1.8;
+    text-align: left !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!-- Adapted from the AudioEditSurvey page and the Academic Project Page
+     Template / 3DGS.zip styles. See THIRD_PARTY_NOTICES.md for attribution. -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <title>EmoTrace: Hierarchical Masked Diffusion Transformer for Fine-Grained Temporal Speech Emotion Recognition</title>
+  <meta name="description" content="EmoTrace generates time-aligned coarse and fine emotion trajectories from speech with a hierarchical masked diffusion Transformer.">
+  <meta property="og:title" content="EmoTrace: Fine-Grained Temporal Speech Emotion Recognition">
+  <meta property="og:description" content="Hierarchical masked diffusion for time-aligned coarse and fine emotion trajectories from speech.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://emotrace.github.io/teaser.png">
+  <link rel="canonical" href="https://emotrace.github.io/">
+  <meta property="og:url" content="https://emotrace.github.io/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="citation_title" content="Hierarchical Masked Diffusion Transformer for Fine-Grained Temporal Speech Emotion Recognition">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="bulma_purged.min.css">
+  <link rel="stylesheet" href="template.css">
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+  <a class="skip-link" href="#abstract">Skip to abstract</a>
+  <main>
+    <header class="hero publication-header">
+      <div class="hero-body">
+        <div class="container is-max-desktop has-text-centered">
+          <h1 class="title is-1 publication-title">
+            <span class="project-name">EmoTrace</span>
+            <span class="paper-title">Hierarchical Masked Diffusion Transformer<br class="desktop-break"> for Fine-Grained Temporal<br class="desktop-break"> Speech Emotion Recognition</span>
+          </h1>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero teaser" aria-label="EmoTrace framework overview">
+      <div class="container is-max-desktop">
+        <figure class="paper-figure">
+          <a class="figure-link" href="teaser.pdf" target="_blank" rel="noopener" aria-label="Open the EmoTrace framework figure as a full-resolution PDF in a new tab">
+            <img src="teaser.png" width="3000" height="1011" alt="EmoTrace framework. Panel (a) shows audio-conditioned denoising with soft parent conditioning and feedback of predicted coarse and fine emotion labels. Panel (b) illustrates Remask–Refine, which jointly masks and updates selected coarse and fine label pairs along the speech timeline." fetchpriority="high" decoding="async">
+          </a>
+          <figcaption>
+            <strong>Overview of EmoTrace.</strong> (a) Audio-conditioned denoising with soft parent conditioning. Dashed feedback supplies predicted label context during Stage III and iterative inference. (b) Remask–Refine jointly masks and updates selected L1/L2 pairs, preserving other posteriors. Upper/lower rows denote L1/L2.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section abstract-section" id="abstract" aria-labelledby="abstract-title">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered" id="abstract-title">Abstract</h2>
+        <div class="content has-text-justified abstract-copy">
+          <p>Speech emotion recognition is essential for understanding human communication and enabling natural human–machine interaction. However, coarse clip-level predictions overlook subtle emotional distinctions and changes over time. We introduce <span class="method-name">EmoTrace</span>, a hierarchical masked diffusion Transformer that generates time-aligned coarse and fine emotion trajectories from speech. Masked reconstruction learns temporal and hierarchical dependencies, while training with model-generated context enables our method to iteratively revise uncertain predictions. To obtain supervision at scale, we construct <span class="method-name">EmoForge</span> through automated consensus annotation of 1.9 million real and synthesized speech clips. During training, online concatenation converts available clip labels into weak temporal supervision without manual temporal annotation. We further curate <span class="method-name">EmoScope</span>, a benchmark with human clip-level and temporal annotations across diverse speech sources and challenging conditions. On <span class="method-name">EmoScope</span>, <span class="method-name">EmoTrace</span> improves frame-level fine-grained accuracy by 18.9 percentage points over the strongest audio-language baseline. Evaluation on six external corpora from EmoBox further demonstrates robust and accurate emotion recognition across languages. These trajectories could support emotion-aware dialogue and fine-grained control of expressive speech generation.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
